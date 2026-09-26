@@ -235,9 +235,10 @@ Possible extensions include:
 
 ## 👨‍💻 Author
 
-**Mohit Kumar Soni**
+**Monu Kumar**
 
 Engineering Student | Electronics & Communication Engineering
+
 
 ---
 
