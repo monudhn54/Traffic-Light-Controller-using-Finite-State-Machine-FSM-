@@ -1,0 +1,12 @@
+# Simulation outputs
+*.vcd
+*.vvp
+tlc_sim
+*.out
+
+# Waveform viewer temp files
+*.gtkw~
+
+# OS files
+.DS_Store
+Thumbs.db

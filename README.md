@@ -107,7 +107,7 @@ Since this is a **Moore FSM**, the output signals are determined by the current 
 
 ## 💻 Implementation
 
-The controller can be implemented using **Verilog HDL** with separate logic for:
+The controller is implemented in **Verilog HDL** (`src/traffic_light_controller.v`) with separate logic for:
 
 1. State declaration
 2. State register
@@ -115,7 +115,7 @@ The controller can be implemented using **Verilog HDL** with separate logic for:
 4. Output logic
 5. Reset handling
 
-Example FSM structure:
+Core FSM structure:
 
 ```verilog
 always @(posedge clk or posedge reset) begin
@@ -132,7 +132,7 @@ The output logic determines which traffic light is active according to the curre
 
 ## 🧪 Simulation & Verification
 
-The design was verified through simulation by observing:
+The design is verified using the testbench in `simulation/traffic_light_controller_tb.v`, which observes:
 
 * Clock transitions
 * FSM state changes
@@ -157,6 +157,14 @@ GREEN
  ...
 ```
 
+### Running the simulation (Icarus Verilog example)
+
+```bash
+iverilog -o tlc_sim src/traffic_light_controller.v simulation/traffic_light_controller_tb.v
+vvp tlc_sim
+gtkwave simulation_waveform.vcd
+```
+
 The simulation confirms that the controller follows the intended traffic-light sequence.
 
 ---
@@ -178,8 +186,6 @@ Traffic-Light-Controller-FSM/
 ├── README.md
 └── LICENSE
 ```
-
-> Update the filenames/folders according to the actual files in your repository.
 
 ---
 
@@ -235,10 +241,9 @@ Possible extensions include:
 
 ## 👨‍💻 Author
 
-**Monu Kumar**
+**Mohit Kumar Soni**
 
 Engineering Student | Electronics & Communication Engineering
-
 
 ---
 
